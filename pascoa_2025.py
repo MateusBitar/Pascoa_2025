@@ -3,20 +3,12 @@ import streamlit as st
 
 
 
-Pascoa_2025 = {
-    "Sabores": ["Maracuja_chocolate", "Brulee", "Brownie_caramelo", "Cookie_brigadeiro", "Ninho_nutella", "Pistache_caramelo","Trio_ovos", "Cupcakes"],
-    "Quantidade_pequeno": [0,0,0,0,0,0,0,0],
-    "Quantidade_grande": [0,0,0,0,0,0,0,0],
-    "Valor_arrecadado": [0,0,0,0,0,0,0,0]
-}
-
-try:
-    df = pd.read_csv("pascoa_2025.csv")  # Tenta carregar o arquivo existente
-except FileNotFoundError:
-    df = pd.DataFrame(Pascoa_2025)  # Se não existir, cria do zero
 
 
-df.to_csv("pascoa_2025.csv", index=False)  
+
+df = pd.read_csv("pascoa_2025.csv")  # Tenta carregar o arquivo existente
+
+
 
 tmh = ""
     
